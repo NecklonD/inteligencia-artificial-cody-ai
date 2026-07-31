@@ -1,0 +1,123 @@
+:root {
+    --primario: #1f3c88;
+    --secundario: #eef3ff;
+    --texto: #1f2937;
+    --fondo: #f7f8fc;
+    --blanco: #ffffff;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    line-height: 1.6;
+    color: var(--texto);
+    background-color: lightblue;
+}
+
+.contenedor {
+    width: min(1100px, 92%);
+    margin: 0 auto;
+}
+
+header {
+    background: var(--primario);
+    color: var(--blanco);
+    padding: 1.5rem 0;
+}
+
+header h1 {
+    margin: 0 0 1rem;
+}
+
+nav {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.75rem;
+}
+
+nav a {
+    color: var(--blanco);
+    text-decoration: none;
+    font-weight: 700;
+    padding: 0.45rem 0.7rem;
+    border-radius: 0.4rem;
+}
+
+nav a:hover,
+nav a:focus-visible {
+    background: rgba(255, 255, 255, 0.16);
+}
+
+.seccion {
+    background: var(--blanco);
+    margin: 1.5rem 0;
+    padding: 1.5rem;
+    border-radius: 0.8rem;
+    box-shadow: 0 0.2rem 0.8rem rgba(0, 0, 0, 0.08);
+}
+
+.hero {
+    background: var(--secundario);
+}
+
+.tarjetas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(210px, 1fr));
+    gap: 1rem;
+}
+
+.tarjeta {
+    border: 1px solid #dfe5f2;
+    border-radius: 0.7rem;
+    padding: 1rem;
+}
+
+img {
+    display: block;
+    width: 100%;
+    height: auto;
+    border-radius: 0.7rem;
+}
+
+.nota {
+    font-size: 0.9rem;
+}
+
+.chatbot {
+    min-height: 280px;
+}
+
+footer {
+    margin-top: 2rem;
+    padding: 1.2rem;
+    text-align: center;
+    background: #111827;
+    color: var(--blanco);
+}
+
+@media (max-width: 700px) {
+    header {
+        text-align: center;
+    }
+
+    nav {
+        flex-direction: column;
+    }
+
+    nav a {
+        display: block;
+        background: rgba(255, 255, 255, 0.10);
+    }
+
+    .seccion {
+        padding: 1rem;
+    }
+}
